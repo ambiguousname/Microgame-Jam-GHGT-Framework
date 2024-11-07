@@ -1,12 +1,12 @@
 
 #options {
     font-family: "Open Sans";
-    color: black;
+    color: white;
     height: 100%;
 }
 
 #options-select-games {
-    background-color: white;
+    background-color: #993629;
     width: 650px;
     height: 472px; 
     position: absolute;
@@ -21,20 +21,20 @@
     color: black;
 }
 #options-select-games > .active.hover > .game-select, #options-select-games > .active > .game-select:hover {
-    background-color: #ffff6e;
+    background-color: #2AA5A5;
 }
 
 #options-select-games > .hover > .game-select, #options-select-games .game-select:hover {
-    background-color: #ffff77b5;
+    background-color: #2AA5A4b5;
     padding-left: 2px;
 }
 
 #options-select-games .active > .game-select {
-    background-color: #ffff00b5;
+    background-color: #2AA5A5b5;
 }
 
 #options-select-games .game-select {
-    border: 1px solid blue;
+    border: 1px solid black;
     border-top-style: none;
     border-left-style: none;
     border-right-style: none;
@@ -45,12 +45,10 @@
 }
 
 #options-select-games .game-select:nth-child(2) {
-    border-top: 1px solid blue;
+    border-top: 1px solid black;
 }
 
 #options-select-games .game-select > label {
-    border: 1px red;
-    border-left-style: solid;
     height: 100%;
     width: 80%;
     display: inline-block;
@@ -131,8 +129,8 @@
     position: relative;
 }
 .remap-options button .remap-button-background {
-    mask-image: url("./art/marker.png");
-    mask-size: 100%;
+    /* mask-image: url("./art/marker.png"); */
+    /* mask-size: 100%; */
     width: 125px;
     height: 46px;
     position: absolute;
