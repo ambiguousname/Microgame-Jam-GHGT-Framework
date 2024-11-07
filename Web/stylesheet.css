@@ -22,7 +22,7 @@ iframe {
 #menu {
     z-index: 2;
     overflow: hidden;
-    background-color: white;
+    background: radial-gradient(#cca867, #983528);
 }
 
 #menu, #transitionContainer{
