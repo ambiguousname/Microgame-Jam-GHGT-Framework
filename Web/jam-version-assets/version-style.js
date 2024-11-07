@@ -6,7 +6,6 @@
  * The javascript module for version specific styles (i.e., showing a timer)
  * @module versionstyle
  */
-import { setUpGooglyEyes, updateGooglyEyes } from "./googly-eye.js";
 
 var ini, MicrogameJamMainManager;
 
@@ -15,7 +14,6 @@ var ini, MicrogameJamMainManager;
  * @param {boolean} isInGame Are we currently in the game? 
  */
 function versionStyleUpdate(isInGame) {
-    updateGooglyEyes();
 
     if (isInGame) {
         timerUpdate();
@@ -45,7 +43,6 @@ function timerUpdate() {
  * @param {MicrogameJam} manager Microgame Jam manager. 
  */
 function initVersionStyle(config, manager) {
-    setUpGooglyEyes();
     ini = config;
     MicrogameJamMainManager = manager;
 }
