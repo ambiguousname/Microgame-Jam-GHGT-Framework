@@ -19,7 +19,6 @@
 @keyframes CCSSGLOBALmainTocredits {
     0% {
         --time: 0s;
-        --ANIM-bye-gda-chan: gdaChanMenuExit 0.8s .menu-art#gda-chan;
         --ANIM-remove-menu-buttons: removeMenuButtons 0.6s .menu-art[id*="Button"];
         --ANIM-title-exit: titleExit 0.5s .menu-art#title;
     }
@@ -60,7 +59,6 @@
     10% {
         --time: 0.5s;
         --ANIM-title-enter: titleEnter 0.5s .menu-art#title;
-        --ANIM-hi-gda-chan: gdaChanMenuEnter 0.8s .menu-art#gda-chan;
         --ANIM-enter-menu-buttons: enterMenuButtons 0.6s .menu-art[id*="Button"];
     }
 }
@@ -68,7 +66,6 @@
 @keyframes CCSSGLOBALmainTooptions {
     0% {
         --time: 0s;
-        --ANIM-bye-gda-chan: gdaChanMenuExit 0.8s .menu-art#gda-chan;
         --ANIM-remove-menu-buttons: removeMenuButtons 0.6s .menu-art[id*="Button"];
         --ANIM-title-exit: titleExit 0.5s .menu-art#title;
         --ANIM-darken-bg: darkenBackground 1s .menu-art#background;
@@ -83,7 +80,6 @@
 @keyframes CCSSGLOBALhideMain {
     0% {
         --time: 0s; 
-        --ANIM-bye-gda-chan: gdaChanMenuExit 0s .menu-art#gda-chan;
         --ANIM-remove-menu-buttons: removeMenuButtons 0s #menu>.menu-art[id*="Button"];
         --ANIM-title-exit: titleExit 0s .menu-art#title;
         --ANIM-darken-bg: darkenBackground 0s .menu-art#background;
@@ -98,7 +94,6 @@
     10% {
         --time: 0.5s;
         --ANIM-title-enter: titleEnter 0.5s .menu-art#title;
-        --ANIM-hi-gda-chan: gdaChanMenuEnter 0.8s .menu-art#gda-chan;
         --ANIM-enter-menu-buttons: enterMenuButtons 0.6s #menu>.menu-art[id*="Button"];
         --ANIM-lighten-bg: lightenBackground 1s .menu-art#background;
     }
@@ -129,7 +124,6 @@
     10% {
         --time: 0.5s;
         --ANIM-title-enter: titleEnter 0.5s .menu-art#title;
-        --ANIM-hi-gda-chan: gdaChanMenuEnter 0.8s .menu-art#gda-chan;
         --ANIM-enter-menu-buttons: enterMenuButtons 0.6s .menu-art[id*="Button"];
     }
 }
@@ -178,6 +172,10 @@
     to {
         transform: translate(-540px, 0);
     }
+}
+
+#playButton, #creditsButton, #optionsButton {
+    width: 20%;
 }
 
 #playButton,#creditsButton,#backButton,#optionsButton,#restartButton {
