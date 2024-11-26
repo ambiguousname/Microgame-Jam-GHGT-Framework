@@ -207,9 +207,7 @@ class MicrogameJamMenu {
      * @alias module:menumanager~MicrogameJamMenu#setUp
      */
     #setUp(){
-        if (!(ini["Transitions"].debug === "win" || ini["Transitions"].debug === "lose")){
-            this.#initMainMenu();
-        }
+        this.#initMainMenu();
         this.#initTransitions();
 
         this.#inputReader = new MicrogameJamMenuInputReader();
@@ -374,8 +372,8 @@ class MicrogameJamMenu {
         var intactLives = new ElementCreator("transitionLives", ini["Transitions"]["Lives"], "lives-transition-art", "transitions");
         intactLives.drawElements();
     
-        // var lostLives = new ElementCreator("transitionLives", ini["Transitions"]["Lives"]["Lost"], "lost-lives-transition-art", "transitions");
-        // lostLives.drawElements();
+        var lostLives = new ElementCreator("transitionLives", ini["Transitions"]["Lives"]["Lost"], "lost-lives-transition-art", "transitions");
+        lostLives.drawElements();
     
         var winTransition = new ElementCreator("winTransition", ini["Transitions"]["Win"], "win-transition-art", "transitions/win");
         winTransition.drawElements();

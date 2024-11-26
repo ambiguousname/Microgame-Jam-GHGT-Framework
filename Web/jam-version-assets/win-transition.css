@@ -9,14 +9,80 @@ First of all, it has to begin with CCSSGLOBAL (so that our Javascript knows to e
     0% {
         /*--time: represents the time at which this should start happening:*/
         --time: 0s;
-        --ANIM-paper-1-enter: BodyWin 0.3s body;
+        /*--ANIM-animation-name: represents a list of animations (separated by spaces), with the time it should take those animations to play represented at the end. 
+        After the seconds, you use the CSS identifier of what element you want this to apply to. Use config.ini to find each image's ID/class.*/
+        --ANIM-menu-exit: menuExit 0.5s #menu;
+    }
+    10% {
+        /*Because of the way CSS works, we can't create custom keyframe definitions. So when creating a new keyframe, just pick the next nearest number. In game development, people often do steps by 10 so they can add intermediate values. That's what I'm doing here.
+        
+        This is just the next step of animations, and it triggers at:*/
+        --time: 0.2s; /* This amount of seconds.*/
+        /*So we can have the lives enter while the background paper is coming in.
+        Transition Javascript will set the lives we need to move with the additional ".active-lives" class.*/
+        --ANIM-lives-enter: livesEnter 0.2s .active-lives;
+        
+        --ANIM-bg-loop: bgLoop 1.2s #gameContainer;
+    }
+
+    20% {
+        --time: 1.5s;
+        /*If we don't need to loop (as defined below)*/
+        --post-loop: 40%;
+        
+        --ANIM-bg-loop: bgLoop 1.2s #gameContainer;
+        --ANIM-bg-loop-animation-iteration-count: infinite;
+    }
+
+    30% {
+        --time: 2s;
+        /* Specify a point (in time) where the animation is allowed to loop. Must be an actually defined keyframe with the --time variable. It will loop until this point. If whatever external logic that controls the animation dictates that the looping is over, then we jump to post-loop.*/
+        --loop: 20%;
+        /*If the animation doesn't need to loop, skip to the next percentage:*/
+        --post-loop: 40%;
+    }
+
+    40% {
+        /*We pretend like the "looping" keyframe doesn't exist (so for non-looping animations, it counts as a straightforward transition).
+        The animation code will then pretend as if we've just started from here.*/
+        --time: 1.8s;
+
+        /*Because we set the iteration count for GDA chan to be infinite, we have to make sure that gets reset here:*/
+        --ANIM-bg-loop-exit: bgLoopExit 0.5s #gameContainer;
+        --ANIM-lives-exit: livesExit 0.2s .active-lives;
     }
     /*You can add more if you want, but generally you can just set up more triggers in the sequence of --ANIM setups. Up to you, really.
     Depends on whether you like setting up a chain of dependencies or being precise with your timing. */
 }
 
-@keyframes BodyWin {
-    
+@keyframes menuExit {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 200%);
+    }
+}
+
+@keyframes bgLoop {
+    from {
+        background-color: #000000;
+    }
+    50% {
+        background-color: red;
+    }
+    to {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes bgLoopExit {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: black;
+    }
 }
 
 /*Then, you create a subset of the animations you made below, and those will play as intended to your applied elements.

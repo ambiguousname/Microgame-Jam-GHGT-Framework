@@ -85,15 +85,19 @@ class MicrogameJam {
         });
 
         if (DEBUG_TRANSITION === "win") {
-            debugLoopTransition(true);
-            document.getElementById("transitionContainer").hidden = false;
-            document.getElementById("winTransition").hidden = false;
+            setTimeout(() => {
+                debugLoopTransition(true);
+                document.getElementById("transitionContainer").hidden = false;
+                document.getElementById("winTransition").hidden = false;
+            }, 500);
         }
 
         if (DEBUG_TRANSITION === "lose"){
-            debugLoopTransition(false);
-            document.getElementById("transitionContainer").hidden = false;
-            document.getElementById("loseTransition").hidden = false;
+            setTimeout(() => {
+                debugLoopTransition(false);
+                document.getElementById("transitionContainer").hidden = false;
+                document.getElementById("loseTransition").hidden = false;
+            }, 500);
         }
 
         this.GameSound.onSetup.then(() => {

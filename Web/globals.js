@@ -48,7 +48,7 @@ const DEBUG_TEST = "";
  * @type {string}
  * @default 
  */
-const DEBUG_TRANSITION = "";
+const DEBUG_TRANSITION = "win";
 /**
  * Set to "loop-end" to allow the animation to infinitely loop at the end. Set to "loop" to let the animation play normally (but restart after it finishes). Set to "pause" to "freeze" at the end of the animation (it actually just leaves animation settings at the end. Infinitely looping iterations will continue to loop). Set to "none" or any other value to allow the animation to play normally.
  * 
