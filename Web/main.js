@@ -133,7 +133,7 @@ class MicrogameJam {
         this.#inGame = false;
 
         this.GameSound.stop("theme");
-        this.GameSound.stop("endTheme");
+        // this.GameSound.stop("endTheme");
 
         this.GameSound.play("buttonClick", this.masterVolume, true, false);
 
