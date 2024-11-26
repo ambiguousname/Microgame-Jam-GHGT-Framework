@@ -22,16 +22,16 @@
 }
 
 #timerTop {
-    background-image: url(./art/timertopframe.png);
+    background-image: url(./art/Timer_Microgame_Jam.png);
     z-index: 1;
 }
 
 #timerEmpty {
-    background-image: url(./art/timerbackground.png);
+    background-image: url(./art/Timer%20Backing.png);
 }
 
 #timerFull {
-    background-image: url(./art/timer.png);
+    background-image: url(./art/Timer%20Fill.png);
     background-color: white;
 }
 
