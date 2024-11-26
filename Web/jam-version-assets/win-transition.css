@@ -22,7 +22,7 @@ First of all, it has to begin with CCSSGLOBAL (so that our Javascript knows to e
         Transition Javascript will set the lives we need to move with the additional ".active-lives" class.*/
         --ANIM-lives-enter: livesEnter 0.2s .active-lives;
         
-        --ANIM-bg-loop: bgLoop 1.2s #gameContainer;
+        --ANIM-bg-loop: bgLoopEnter 1.2s #gameContainer;
     }
 
     20% {
@@ -64,24 +64,33 @@ First of all, it has to begin with CCSSGLOBAL (so that our Javascript knows to e
     }
 }
 
-@keyframes bgLoop {
+@keyframes bgLoopEnter {
     from {
-        background-color: #000000;
-    }
-    50% {
-        background-color: red;
+        background: black;
     }
     to {
-        background-color: #ffffff;
+        background: red;
+    }
+}
+
+@keyframes bgLoop {
+    from {
+        background: red;
+    }
+    50% {
+        background: blue;
+    }
+    to {
+        background: red;
     }
 }
 
 @keyframes bgLoopExit {
     from {
-        background-color: white;
+        background: red;
     }
     to {
-        background-color: black;
+        background: black;
     }
 }
 
