@@ -174,8 +174,12 @@
     }
 }
 
-#playButton, #creditsButton, #optionsButton {
-    width: 20%;
+#playButton, #creditsButton, #backButton {
+    width: 200px;
+}
+
+#optionsButton {
+    width: 25%;
 }
 
 #playButton,#creditsButton,#backButton,#optionsButton,#restartButton {
